@@ -18,7 +18,7 @@ int print_hex_base(va_list arg, char _case)
 }
 /**
 * print_hex - prints a hexadecimal in lower case
-* @arg: list that contains hexadecimal to print
+* @arg: list that contains hexadecimal to print.
 * Return: number of digits printed
 */
 int print_hex(va_list arg)
