@@ -28,7 +28,7 @@ int print_hex(va_list arg)
 #include "main.h"
 /**
 * print_binary - function that prints the binary representation of a number
-* @n: number to be printed in binary
+* @n: number  printed in binary
 * @printed: hold the number of characters printed
 */
 
