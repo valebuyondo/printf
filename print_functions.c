@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 /**
-* print_char - writes the character c to stdout
+* print_char - writes the character c to stdout.
 * @arg: argument
 *
 * Return: On success 1.
