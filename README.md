@@ -1,1 +1,4 @@
-Printf project by Maha Ouardi and Buyondo Vale
+Printf project by 
+Maha Ouardi 
+and 
+Buyondo Vale
