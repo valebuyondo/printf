@@ -6,9 +6,6 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-
-
-
 /**
  * struct format - match the conversion specifiers for printf.
  * @id: type char pointer of the specifier/ (l, h) for (d, i, u, o, x, X).
@@ -20,7 +17,6 @@ typedef struct identifierStruct
 
 	int (*printer)(va_list);
 } identifierStruct;
-
 
 /**typedef struct format
 {
