@@ -28,21 +28,6 @@ int print_hex(va_list arg)
 }
 #include "main.h"
 /**
-* print_binary - function that prints the binary representation of a number.
-* @n: number  printed in binary.
-* @printed: hold the number of characters printed.
-*/
-
-void print_binary(unsigned int n, unsigned int *printed)
-{
-	if (n > 1)
-	{
-		*printed += 1;
-		print_binary(n >> 1, printed);
-	}
-	_putchar((n & 1) + '0');
-}
-/**
 * print_HEX - prints a hexadecimal in upper case
 * @arg: list that contains hexadecimal to print
 * Return: number of digits printed
