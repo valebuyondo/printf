@@ -13,7 +13,7 @@ int print_char(va_list arg)
 	return (_putchar(va_arg(arg, int)));
 }
 /**
-* print_int - prints an integer
+* print_int - prints an integer.
 * @arg: argument.
 * Return: 0
 */
