@@ -8,7 +8,6 @@
 * Return: the number of characters printed
 * (excluding the null byte used to end output to strings).
 */
-
 int printIdentifiers(char next, va_list arg)
 {
 	int functsIndex; identifierStruct functs[] = {
@@ -26,7 +25,7 @@ int printIdentifiers(char next, va_list arg)
 	};
 	for (functsIndex = 0; functs[functsIndex].indentifier != NULL; functsIndex++)
 	{
-		if (functs[functsIndex].idnentifier[0] == next)
+		if (functs[functsIndex].indentifier[0] == next)
 			return (functs[functsIndex].printer(arg));
 	}
 	return (0);
@@ -83,4 +82,3 @@ int _printf(const char *format, ...)
 	}
 	va_end(arg);
 	return (charPrinted);
-}

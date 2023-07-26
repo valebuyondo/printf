@@ -17,7 +17,6 @@ typedef struct identifierStruct
 
 	int (*printer)(va_list);
 } identifierStruct;
-
 int _putchar(char c);
 int print_int(va_list arg);
 int print_unsigned(va_list arg);
@@ -35,3 +34,4 @@ int print_HEX(va_list arg);
 int print_STR(va_list arg);
 
 #endif
+
