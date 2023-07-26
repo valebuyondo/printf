@@ -21,6 +21,7 @@ int printIdentifiers(char next, va_list arg)
 		{"x", print_hex},
 		{"X", print_HEX},
 		{"S", print_STR},
+		{"%p", printf_pointer}
 		{NULL, NULL}
 	};
 	for (functsIndex = 0; functs[functsIndex].indentifier != NULL; functsIndex++)
