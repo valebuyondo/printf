@@ -1,6 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdio.h>
+#include <stdint.h>
 /**
 * print_char - writes the character c to stdout.
 * @arg: argument
@@ -118,15 +119,32 @@ int print_unsigned(va_list arg)
 	}
 	return (i + 1);
 }
+
+/**
+ * print_pointer - Prints a pointer in hexadecimal format.
+ * @ptr: The pointer to be printed.
+ * Return: The number of characters printed.
+ */
 int print_pointer(void *ptr)
 {
-    uintptr_t addr = (uintptr_t)ptr;
-    int charPrinted = 0;
+	char buffer[20]; // Adjust the size as needed
+	uintptr_t addr = (uintptr_t)ptr;
+	int charPrinted = 0;
 
-    charPrinted += _putchar('0');
-    charPrinted += _putchar('x');
-    charPrinted += print_unsignedIntToHex(addr, 'a');
+	// Use sprintf to format the pointer address in hexadecimal
+	sprintf(buffer, "%p", ptr);
 
-    return charPrinted;
+	// Print the formatted pointer
+	for (int i = 0; buffer[i] != '\0'; i++)
+	{
+		_putchar(buffer[i]);
+		charPrinted++;
+	}
+
+	return charPrinted;
 }
+
+
+
+
 
