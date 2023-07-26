@@ -25,7 +25,6 @@ int print_hex(va_list arg)
 {
 	return (print_hex_base(arg, 'a'));
 }
-
 /**
 * print_HEX - prints a hexadecimal in upper case
 * @arg: list that contains hexadecimal to print
