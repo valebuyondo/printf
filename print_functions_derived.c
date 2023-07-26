@@ -16,7 +16,6 @@ int print_unsignedToBinary(va_list arg)
 	print_binary(n, &printed);
 	return (printed);
 }
-
 /**
 * print_oct - prints number in octal base.
 * @arg: list containing octal number to be printed
