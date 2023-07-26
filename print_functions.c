@@ -45,27 +45,28 @@ int print_int(va_list arg)
 int print_STR(va_list arg)
 {
 	int i;
-    	char *str = va_arg(arg, char*);
 
-    	if (str == NULL)
-    		str = "(null)";
-    	else if (*str == '\0')
-    		return (-1);
+	char *str = va_arg(arg, char*);
 
-    	for (i = 0; str[i]; i++)
-    	{
-    		if (str[i] < 32 || str[i] >= 127)
-    		{
-    			_putchar('\\');
-    			_putchar('x');
-    			if (str[i] < 16)
-    				_putchar('0');
-    			print_unsignedIntToHex(str[i], 'a'); // Use lowercase 'a' for hexadecimal letters
-    		}
-    		else
-    			_putchar(str[i]);
-    	}
-    	return (i);
+	if (str == NULL)
+		str = "(null)";
+	else if (*str == '\0')
+		return (-1);
+
+	for (i = 0; str[i]; i++)
+	{
+		if ((str[i] < 32 && str[i] > 0) || str[i] >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+			if (i < 16)
+				_putchar('0');
+			print_unsignedIntToHex(str[i], 'A');
+		}
+		else
+			_putchar(str[i]);
+	}
+	return (i);
 }
 /**
 * print_str - prints a string with a `s` (lower case) specifier
