@@ -118,4 +118,15 @@ int print_unsigned(va_list arg)
 	}
 	return (i + 1);
 }
+int print_pointer(void *ptr)
+{
+    uintptr_t addr = (uintptr_t)ptr;
+    int charPrinted = 0;
+
+    charPrinted += _putchar('0');
+    charPrinted += _putchar('x');
+    charPrinted += print_unsignedIntToHex(addr, 'a');
+
+    return charPrinted;
+}
 
