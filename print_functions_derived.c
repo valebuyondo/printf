@@ -9,12 +9,9 @@
 int print_unsignedToBinary(va_list arg)
 {
 	unsigned int n = va_arg(arg, unsigned int);
-
-	unsigned int printed;
-
-	print_binary(n, &printed);
-	print_binary(n, &printed);
-	return (printed);
+    	unsigned int printed = 0;
+    	print_binary(n, &printed);
+    	return (printed);
 }
 /**
 * print_oct - prints number in octal base.
