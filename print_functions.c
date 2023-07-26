@@ -14,48 +14,29 @@ int print_char(va_list arg)
 	return (_putchar(va_arg(arg, int)));
 }
 /**
- * print_int - Prints an integer with optional flags.
- * @arg: The argument containing the integer to print.
- * @flags: The flags for formatting (e.g., +, -, space, #, etc.).
- * Return: The number of characters printed.
- */
-int print_int(va_list arg, char flags)
+* print_int - prints an integer.
+* @arg: argument.
+* Return: 0.
+*/
+int print_int(va_list arg)
 {
-    int n = va_arg(arg, int);
-    unsigned int divisor = 1, i, resp, charPrinted = 0;
+	unsigned int divisor = 1, i, resp, charPrinted = 0;
+	int n = va_arg(arg, int);
 
-    // Handle the '+' and 'space' flags
-    if (flags == '+' || flags == ' ')
-    {
-        if (n >= 0)
-        {
-            _putchar(flags); // Either '+' or ' ' will be printed
-            charPrinted++;
-        }
-    }
-    else if (n < 0)
-    {
-        _putchar('-');
-        charPrinted++;
-        n *= -1;
-    }
-
-    // Handle the '#' flag
-    if (flags == '#')
-    {
-        _putchar('0');
-        charPrinted++;
-    }
-
-    for (i = 0; n / divisor > 9; i++, divisor *= 10)
-        ;
-    for (; divisor >= 1; n %= divisor, divisor /= 10, charPrinted++)
-    {
-        resp = n / divisor;
-        _putchar('0' + resp);
-    }
-
-    return charPrinted;
+	if (n < 0)
+	{
+		_putchar('-');
+		charPrinted++;
+		n *= -1;
+	}
+	for (i = 0; n / divisor > 9; i++, divisor *= 10)
+		;
+	for (; divisor >= 1; n %= divisor, divisor /= 10, charPrinted++)
+	{
+		resp = n / divisor;
+		_putchar('0' + resp);
+	}
+	return (charPrinted);
 }
 /**
 * print_STR - prints a string with a `S` (upper case) specificer
