@@ -9,21 +9,7 @@
 int print_unsignedToBinary(va_list arg)
 {
 	unsigned int n = va_arg(arg, unsigned int);
-    	int printed = 0;
-    	unsigned int temp = n;
-
-    	if (n == 0)
-    	{
-    		_putchar('0');
-    		return (1);
-    	}
-
-    	while (temp)
-    	{
-    		temp >>= 1;
-    		printed++;
-    	}
-
+    	unsigned int printed = 0;
     	print_binary(n, &printed);
     	return (printed);
 }
