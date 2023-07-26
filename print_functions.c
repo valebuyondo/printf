@@ -60,7 +60,7 @@ int print_STR(va_list arg)
     			_putchar('x');
     			if (str[i] < 16)
     				_putchar('0');
-    			print_unsignedIntToHex(str[i], 'A');
+    			print_unsignedIntToHex(str[i], 'a'); // Use lowercase 'a' for hexadecimal letters
     		}
     		else
     			_putchar(str[i]);
