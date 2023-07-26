@@ -117,7 +117,7 @@ int print_unsigned(va_list arg)
  * @n: the unsigned integer to print
  * Return: the number of characters printed
  */
-int printUnsignedToBinary(unsigned int n)
+int print_unsignedToBinary(unsigned int n)
 {
 	int charCount = 0;
 	unsigned int mask = 1 << ((sizeof(n) * 8) - 1); // Get the leftmost bit
