@@ -33,7 +33,6 @@ int print_hex_base(va_list arg, char _case);
 int print_hex(va_list arg);
 int print_HEX(va_list arg);
 int print_STR(va_list arg);
-int printf_pointer(va_list val);
 
 #endif
 
