@@ -59,28 +59,42 @@ int print_oct(va_list arg)
 */
 int print_unsignedIntToHex(unsigned int num, char _case)
 {
-	unsigned int num2;
+	unsigned int num2 = num;
+    	int i, remainder, nbrCharacters = 0;
 
-	int i, j, remainder, nbrCharacters = 0;
+    	char *numhex;
 
-	char *numhex;
+    	if (num2 == 0)
+    		return (_putchar('0'));
 
-	for (num2 = num; num2 != 0; nbrCharacters++, num2 /= 16)
-		;
-	numhex = malloc(nbrCharacters);
+    	while (num2 != 0)
+    	{
+    		nbrCharacters++;
+    		num2 /= 16;
+    	}
 
-	for (i = 0; num != 0; i++)
-	{
-		remainder = num % 16;
+    	numhex = malloc(nbrCharacters + 1); // Allocate memory for null terminator
 
-		if (remainder < 10)
-			numhex[i] = remainder + '0';
-		else
-			numhex[i] = remainder - 10 + _case;
-		num = num / 16;
-	}
-	for (j = i - 1; j >= 0; j--)
-		_putchar(numhex[j]);
-	free(numhex);
-	return (nbrCharacters);
+    	if (numhex == NULL)
+    		return (-1); // Handle memory allocation failure
+
+    	for (i = 0; num != 0; i++)
+    	{
+    		remainder = num % 16;
+
+    		if (remainder < 10)
+    			numhex[i] = remainder + '0';
+    		else
+    			numhex[i] = remainder - 10 + _case;
+    		num = num / 16;
+    	}
+
+    	numhex[i] = '\0'; // Add null terminator
+
+    	// Print the hexadecimal representation
+    	for (i = nbrCharacters - 1; i >= 0; i--)
+    		_putchar(numhex[i]);
+
+    	free(numhex);
+    	return (nbrCharacters);
 }
