@@ -6,8 +6,9 @@
 * @next: character after the %
 * @arg: argument for the indentifier
 * Return: the number of characters printed
-* (excluding the null byte used to end output to strings).
+* (excluding the null byte used to end output to strings)
 */
+
 int printIdentifiers(char next, va_list arg)
 {
 	int functsIndex; identifierStruct functs[] = {
@@ -83,4 +84,3 @@ int _printf(const char *format, ...)
 	va_end(arg);
 	return (charPrinted);
 }
-
