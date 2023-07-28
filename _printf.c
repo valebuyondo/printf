@@ -8,7 +8,6 @@
 * Return: the number of characters printed
 * (excluding the null byte used to end output to strings)
 */
-
 int printIdentifiers(char next, va_list arg)
 {
 	int functsIndex; identifierStruct functs[] = {
