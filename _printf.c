@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-
 /**
 * printIdentifiers - output data based on special characters
 * @next: character after the %
